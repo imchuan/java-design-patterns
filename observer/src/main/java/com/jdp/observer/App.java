@@ -5,15 +5,13 @@ package com.jdp.observer;
  */
 public class App {
     public static void main(String[] args) {
-        Email email = new Email();
+        WeatherData weatherData = new WeatherData();
 
-        Observer dogObserver = new Observer1();
-        Observer monkeyObserver = new Observer2();
+        CurrentConditionsDisplay current = new CurrentConditionsDisplay(weatherData);
 
-        email.addObserver(dogObserver);
-        email.addObserver(monkeyObserver);
+        weatherData.setMeasurements(10, 39, 23);
 
-        email.send("First email");
-        email.send("Second email");
+        weatherData.measurementsChanged();
+
     }
 }
