@@ -12,6 +12,7 @@
         <module>strategy</module>
         <module>singleton</module>
         <module>command</module>
+        <module>template</module>
     </modules>
     <packaging>pom</packaging>
 
